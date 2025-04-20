@@ -1,0 +1,52 @@
+/* Container */
+.cv-editor-page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Başlık */
+.cv-editor-page h2 {
+  font-weight: 600;
+}
+
+/* Toolbar */
+.toolbar .btn {
+  margin-right: 0.5rem;
+}
+.toolbar .btn:last-child {
+  margin-right: 0;
+}
+
+/* Şablon butonları aktifken */
+.template-btn.active {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* Canvas Container */
+.canvas-container {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* PDF İndir Butonu */
+#exportPdf {
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+/* ---------- Hero Bölümü ---------- */
+.hero {
+  background: linear-gradient(135deg, #5a8dee 0%, #4666e5 100%);
+}
+
+/* ---------- Kart Hover Efekti ---------- */
+.hover-shadow {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}

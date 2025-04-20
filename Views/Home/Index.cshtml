@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Anasayfa - CV Oluşturucu";
+}
+
+<section class="hero bg-primary text-center py-5 mb-5">
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-4 text-white">Profesyonel CV'nizi Kolayca Oluşturun</h1>
+        <p class="lead mb-4 fs-4 text-white">Modern şablonlar ve kullanıcı dostu arayüz ile dakikalar içinde etkileyici bir CV hazırlayın.</p>
+        <a asp-controller="Home" asp-action="Editor" asp-route-tpl="template1" class="btn btn-light btn-lg px-5 py-3">
+            Hemen Başla <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</section>
+
+<section class="features bg-light py-5 mb-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="bi bi-pencil-square fs-1 text-primary mb-3"></i>
+                    <h3>Kolay Düzenleme</h3>
+                    <p>Sürükle-bırak arayüzü ile CV'nizi kolayca özelleştirin.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="bi bi-download fs-1 text-primary mb-3"></i>
+                    <h3>PDF İndirme</h3>
+                    <p>CV'nizi yüksek kaliteli PDF formatında indirin.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="bi bi-images fs-1 text-primary mb-3"></i>
+                    <h3>Resim Ekleme</h3>
+                    <p>Fotoğraf ve logolarınızı kolayca ekleyin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="templates pb-5">
+    <div class="container">
+        <h2 class="mb-4 text-center display-5 fw-bold">Profesyonel Şablonlar</h2>
+        <p class="text-center text-muted mb-5">İhtiyacınıza en uygun şablonu seçin ve özelleştirmeye başlayın.</p>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-lg h-100 border-0 template-card">
+                    <img src="/images/thumb1.png" class="card-img-top" alt="Modern Şablon">
+                    <div class="card-body d-flex flex-column p-4">
+                        <h4 class="card-title">Modern Şablon</h4>
+                        <p class="card-text flex-grow-1 text-muted">Yenilikçi ve çağdaş bir tasarımla öne çıkın.</p>
+                        <a asp-controller="Home"
+                           asp-action="Editor"
+                           asp-route-tpl="template1"
+                           class="btn btn-primary btn-lg mt-3">
+                            Şablonu Seç
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-lg h-100 border-0 template-card">
+                    <img src="/images/thumb2.png" class="card-img-top" alt="Klasik Şablon">
+                    <div class="card-body d-flex flex-column p-4">
+                        <h4 class="card-title">Klasik Şablon</h4>
+                        <p class="card-text flex-grow-1 text-muted">Geleneksel ve zamansız bir tasarımla güven verin.</p>
+                        <a asp-controller="Home"
+                           asp-action="Editor"
+                           asp-route-tpl="template2"
+                           class="btn btn-primary btn-lg mt-3">
+                            Şablonu Seç
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-lg h-100 border-0 template-card">
+                    <img src="/images/thumb1.png" class="card-img-top" alt="Profesyonel Şablon">
+                    <div class="card-body d-flex flex-column p-4">
+                        <h4 class="card-title">Profesyonel Şablon</h4>
+                        <p class="card-text flex-grow-1 text-muted">Kurumsal ve etkileyici bir görünüm elde edin.</p>
+                        <a asp-controller="Home"
+                           asp-action="Editor"
+                           asp-route-tpl="template3"
+                           class="btn btn-primary btn-lg mt-3">
+                            Şablonu Seç
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.bg-gradient {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+}
+
+.template-card {
+    transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+    transform: translateY(-10px);
+}
+
+.features i {
+    font-size: 3rem;
+}
+</style>

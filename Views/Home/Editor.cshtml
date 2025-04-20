@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "CV Düzenleyici";
+}
+
+<script>
+  // JS’e hangi şablonla geleceğimizi söylüyoruz
+  window.initialTpl = '@ViewBag.TemplateName';
+</script>
+
+<div class="cv-editor-page">
+  <h2 class="text-center mb-4">CV Düzenleyici</h2>
+
+  <div class="toolbar text-center mb-3">
+  <div class="btn-group me-3">
+      <button class="btn btn-outline-primary template-btn" data-tpl="template1">Modern Şablon</button>
+      <button class="btn btn-outline-primary template-btn" data-tpl="template2">Klasik Şablon</button>
+      <button class="btn btn-outline-primary template-btn" data-tpl="template3">Profesyonel Şablon</button>
+  </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <button id="addHeading" class="btn btn-primary me-2">Başlık Ekle</button>
+        <button id="addText" class="btn btn-success me-2">Metin Ekle</button>
+        <button id="addBullet" class="btn btn-info me-2">Madde Ekle</button>
+        <button id="addImage" class="btn btn-secondary me-2">Resim Ekle</button>
+        <button id="deleteSelected" class="btn btn-danger">Seçileni Sil</button>
+      </div>
+      <div class="text-format-controls" style="display: none;">
+        <select id="fontFamily" class="form-select form-select-sm me-2" style="width: 150px; display: inline-block;">
+          <option value="Arial">Arial</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+        <select id="fontSize" class="form-select form-select-sm me-2" style="width: 80px; display: inline-block;">
+          <option value="12">12px</option>
+          <option value="14">14px</option>
+          <option value="16">16px</option>
+          <option value="18">18px</option>
+          <option value="20">20px</option>
+          <option value="24">24px</option>
+          <option value="32">32px</option>
+          <option value="40">40px</option>
+        </select>
+          <div class="d-flex align-items-center">
+            <div class="btn-group me-2">
+              <button id="makeBold" class="btn btn-sm btn-outline-secondary"><i class="bi bi-type-bold"></i></button>
+              <button id="makeItalic" class="btn btn-sm btn-outline-secondary"><i class="bi bi-type-italic"></i></button>
+            </div>
+            <input type="color" id="textColor" class="form-control form-control-sm me-2" style="width: 50px;" title="Metin Rengi">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="canvas-container mx-auto mb-3">
+    <canvas id="cvCanvas" width="800" height="1000"></canvas>
+  </div>
+
+  <div class="text-center">
+    <button id="exportPdf" class="btn btn-primary">PDF Olarak İndir</button>
+  </div>
+</div>
